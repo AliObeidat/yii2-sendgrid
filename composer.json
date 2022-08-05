@@ -1,0 +1,29 @@
+{
+    "name": "aliobeidat/yii2-sendgrid",
+    "description": "Yii2 Mailer extension for SendGrid with batch mailing support. This extension is designed to replace them all! The only Yii2 SendGrid extension you will need!",
+    "keywords": ["yii2", "sendgrid", "yii2 mailer", "yii2 sendgrid", "yii2 sendgrid mailer"],
+    "homepage": "https://github.com/AliObeidat/yii2-sendgrid-mailer",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali Obeidat",
+            "email": "AliObeidat@users.noreply.github.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/AliObeidat/yii2-sendgrid/issues?state=open",
+        "source": "https://github.com/AliObeidat/yii2-sendgrid"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1.6",
+        "yiisoft/yii2": "~2.0.45",
+        "sendgrid/sendgrid": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "aliobeidat\\sendgrid\\": "src"
+        }
+    }
+}
