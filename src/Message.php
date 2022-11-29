@@ -4,6 +4,8 @@ namespace aliobeidat\sendgrid;
 use SendGrid\Mail\Attachment;
 use SendGrid\Mail\Content;
 use SendGrid\Mail\EmailAddress;
+use SendGrid\Mail\From;
+use SendGrid\Mail\Mail;
 use SendGrid\Mail\Personalization;
 use Yii;
 use yii\base\InvalidConfigException;
@@ -629,13 +631,13 @@ class Message extends BaseMessage
 
             if ( is_array($this->from) ) {
                 if ( is_numeric(key($this->from)) ) {
-                    $this->getSendGridMail()->setFrom( new EmailAddress($this->from[0]) );
+                    $this->getSendGridMail()->setFrom( new From($this->from[0]) );
                 } else {
                     reset($this->from);     // reset pointer to beginning. Necessary when using current() and key()
-                    $this->getSendGridMail()->setFrom( new EmailAddress(key($this->from), current($this->from),) );
+                    $this->getSendGridMail()->setFrom( new From(key($this->from), current($this->from),) );
                 }
             } else {
-                $this->getSendGridMail()->setFrom( new EmailAddress($this->from) );
+                $this->getSendGridMail()->setFrom( new From($this->from) );
             }
 
             if ( isset($this->replyTo) ) {
