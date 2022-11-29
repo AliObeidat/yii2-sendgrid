@@ -16,7 +16,7 @@ php composer.phar require --prefer-dist aliobeidat/yii2-sendgrid
 or add
 
 ```json
-"aliobeidat/yii2-sendgrid": "~1.0"
+"aliobeidat/yii2-sendgrid": "dev-master"
 ```
 
 to the require section of your application's `composer.json` file.
